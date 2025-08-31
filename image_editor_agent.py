@@ -98,7 +98,6 @@ class ImageEditorAgent:
 
         try:
             response = self.agent.invoke(messages, config=config)
-            logger.debug("🤖 Agent processed message successfully")
             return response
         except Exception as e:
             logger.error(f"❌ Agent invocation failed: {e}")
@@ -193,7 +192,6 @@ class ImageEditorAgent:
                     # Check if it was successful (not an error)
                     content = message.content
                     if "✅" in content and "ERROR" not in content:
-                        logger.debug("🛠️ Image editing tool was used successfully")
                         return True
         return False
 

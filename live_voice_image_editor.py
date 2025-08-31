@@ -114,9 +114,6 @@ class VoiceLiveImageEditor:
             # Set the input image for the image editing tool
             if input_image is not None:
                 self.agent.set_input_image(input_image)
-                logger.debug(
-                    f"📷 Input image received: {type(input_image)} - shape: {getattr(input_image, 'shape', 'N/A')}"
-                )
             else:
                 logger.debug("📷 No input image provided")
 
